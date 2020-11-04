@@ -321,7 +321,6 @@ while True:
     submission.comments.replace_more(limit = None)
     for comment in submission.comments.list():
         blob = TextBlob(str(comment.body))
-        sub = blob.sentiment.subjectivity
         polarity = blob.sentiment.polarity
         
         if 'biden' in comment.body.lower() and polarity > 0: #pro biden
