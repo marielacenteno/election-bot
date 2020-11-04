@@ -322,20 +322,21 @@ while True:
     for comment in submission.comments.list():
         blob = TextBlob(str(comment.body))
         polarity = blob.sentiment.polarity
-        
+        print('polarity =', polarity)
         if 'biden' in comment.body.lower() and polarity > 0: #pro biden
             comment.upvote()
+            print('biden uv')
 
-        if 'biden' in comment.body.lower() and polarity < 0: #anti biden
+        elif 'biden' in comment.body.lower() and polarity < 0: #anti biden
             comment.downvote()
+            print('biden dv')
 
-        if 'trump' in comment.body.lower() and polarity > 0: #pro trump
+        elif 'trump' in comment.body.lower() and polarity > 0: #pro trump
             comment.downvote()
-        
-        if 'trump' in comment.body.lower() and polarity < 0: #anti trump
+            print('trump dv')
+        elif 'trump' in comment.body.lower() and polarity < 0: #anti trump
             comment.upvote()
-
-        print('sentiment measured')
+            print('trump uv')
         
 
 
