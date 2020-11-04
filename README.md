@@ -13,8 +13,26 @@ My bot spread information and opinions on Biden and Trump. It even got to fight 
 ## Bot Counter
 
 ```
+Marielas-MBP:bots marielacenteno$ /usr/local/bin/python3 /Users/marielacenteno/Downloads/bots/bot_counter.py
+len(comments)= 1000
+len(top_level_comments)= 197
+len(replies)= 803
+len(valid_top_level_comments)= 197
+len(not_self_replies)= 803
+len(valid_replies)= 291
+========================================
+valid_comments= 513
+========================================
+NOTE: the number valid_comments is what will be used to determine your extra credit
+Marielas-MBP:bots marielacenteno$ 
+
 ```
 
 ## My Score
 I completed the six tasks to run my bot and the github repo, which grants me 16 points. In addition to that, I did the following extra credit tasks:
+  1. Upvoting comments mentioning my candidate (1 point)
+  2. Upvoting submissions mentioning my candidate (1 point)
+  3. My bot generated over 500 valid comments (1 point)
+  4. Textblob: My bot measured the sentiment of comments/submissions and upvoted/downvoted based on sentiment (2 points)
+  Total grade = 21/20
 
