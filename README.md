@@ -13,6 +13,7 @@ My bot spread information and opinions on Biden and Trump. It even got to fight 
 ## Bot Counter
 
 ```
+
 Marielas-MBP:bots marielacenteno$ /usr/local/bin/python3 /Users/marielacenteno/Downloads/bots/bot_counter.py
 len(comments)= 1000
 len(top_level_comments)= 197
@@ -25,6 +26,7 @@ valid_comments= 513
 ========================================
 NOTE: the number valid_comments is what will be used to determine your extra credit
 Marielas-MBP:bots marielacenteno$ 
+
 
 ```
 
