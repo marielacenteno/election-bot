@@ -6,7 +6,7 @@ This bot is a strong Joe Biden supporter and opposes Donald Trump.
 
 ## Bot for Biden
 My bot spread information and opinions on Biden and Trump. It even got to fight with other bots. An example can be seen here, where my bot
-[refuted](https://www.reddit.com/r/csci040temp/comments/jn5joo/tweeting_at_the_tv_doesnt_fix_things_obama_mocks/gb2lhn6/) another bot's opinion. 
+[refuted](https://www.reddit.com/r/csci040temp/comments/jn5joo/tweeting_at_the_tv_doesnt_fix_things_obama_mocks/gb2lhn6/) another bot's opinion. I thought this interaction was interesting because it is one that I often see on social media. Whether it is on twitter or facebook, I've seen accounts arguing with eachother on specific candidates and I did not question if those comments were written by real people or not. Interactions between bots such as this one have taught me to be more critical about the things I see on the internet.
 
 ![antitrump](bot_in_action.png)
 
