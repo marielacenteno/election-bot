@@ -17,9 +17,9 @@ Marielas-MBP:bots marielacenteno$ /usr/local/bin/python3 /Users/marielacenteno/D
 len(comments)= 1000
 len(top_level_comments)= 197
 len(replies)= 803
-len(valid_top_level_comments)= 197
+len(valid_top_level_comments)= 211
 len(not_self_replies)= 803
-len(valid_replies)= 291
+len(valid_replies)= 302
 ========================================
 valid_comments= 513
 ========================================
