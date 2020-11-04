@@ -2,7 +2,7 @@ import praw
 import random
 import datetime
 import time
-import textblob
+from textblob import TextBlob
 
 # FIXME:
 # copy your generate_comment functions from the week_07 lab here
@@ -154,6 +154,7 @@ submission = reddit.submission(url=reddit_debate_url)
 # you can change this while loop to an if statement to make the code run only once
 
 while True:
+    
     try:
 
     # printing the current time will help make the output messages more informative
@@ -270,7 +271,7 @@ while True:
 
     except praw.exceptions.APIException:
         print('exception found')
-        time.sleep(60)
+        time.sleep(10)
         print('Done sleeping')
 
     # FIXME (task 5): select a new submission for the next iteration;
@@ -293,7 +294,6 @@ while True:
         submission = reddit.submission(x)
 
 
-'''
 # EXTRA CREDIT #
 
 # Task 1, Section 1: Upvote any COMMENT mentioning my favorite candidate (1 point)  #
@@ -308,14 +308,14 @@ while True:
     #Task 2, section 1: Upvoting SUBMISSION with my favorite candidate #
     
 
-    for submission in reddit.submission(url=reddit_debate_url):
+    for submission in reddit.subreddit('csci040temp').top(time_filter='all'):
         if 'biden' in submission.title.lower():
             submission.upvote()
             print('Submission Upvote')
 
     #Task 3, Section 1: Sorting Comments and making my bot reply to higly upvoted comments #
-    for comment in submission.comments.list():
-        x = reverse(sorted(submission.comments.list())
+    #for comment in submission.comments.list():
+       # x = reverse(sorted(submission.comments.list())
 
     #Task 3, Section 2: Measuring sentiment
     submission.comments.replace_more(limit = None)
@@ -324,22 +324,22 @@ while True:
         sub = blob.sentiment.subjectivity
         polarity = blob.sentiment.polarity
         
-        if 'biden' in comment.body.lower() and polarity > 0.5:
+        if 'biden' in comment.body.lower() and polarity > 0: #pro biden
             comment.upvote()
 
-        if 'trump' in comment.body.lower() and polarity > 0.5:
+        if 'biden' in comment.body.lower() and polarity < 0: #anti biden
+            comment.downvote()
+
+        if 'trump' in comment.body.lower() and polarity > 0: #pro trump
             comment.downvote()
         
-        if 'biden' in comment.body.lower() and sentiment > 0:
+        if 'trump' in comment.body.lower() and polarity < 0: #anti trump
             comment.upvote()
-
-        if 'trump' in comment.body.lower() and sentiment > 0:
-            comment.downvote()
 
         print('sentiment measured')
         
 
-'''
+
 
 
 
